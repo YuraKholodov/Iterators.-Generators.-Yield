@@ -4,16 +4,16 @@ class FlatIterator:
 
     def __iter__(self):
         self.list_iterator = iter(self.list_of_list)
-        self.list_ = []
+        self.lst = []
         self.cur = -1
         return self
 
     def __next__(self):
         self.cur += 1
-        if len(self.list_) == self.cur:
+        if len(self.lst) == self.cur:
             self.cur = 0
-            self.list_ = next(self.list_iterator)
-        return self.list_[self.cur]
+            self.lst = next(self.list_iterator)
+        return self.lst[self.cur]
 
 
 def test_1():
